@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --open && dotnet run --project ./Livraria.API/Livraria.API.csproj",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
