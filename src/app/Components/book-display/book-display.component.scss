@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3498db; /* Cor de fundo azul */
+    margin: 0,0%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    a{
+        text-decoration: none;
+    }
+}
+
+.card {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border: 1px solid #3498db; /* Borda azul */
+    border-radius: 10px;
+    width: 300px;
+    // min-height: 670px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    // position: relative;
+    box-shadow: 0px 2px 6px rgb(0 0 0 );
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card:hover{
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0px 0px 10px 2px #3498db; /* Adiciona uma sombra ao passar o mouse */
+}
+
+.card h2 {
+    color: #3498db; /* Cor azul para o título */
+}
+
+.ler-livro{
+    padding: 20px 0px 2px 0px;
+}
+.ler-livro a{
+    border: 1px solid #3498db;
+    border-width: 0 20px 0 20px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.detalhes{
+    // position: absolute;
+    bottom: 0;
+    // border: 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+    
+}

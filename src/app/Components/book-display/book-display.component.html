@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style></style>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="container">
+      <div class="card" *ngFor="let livro of books$ | async">
+        <!-- <a href="#"> -->
+        <img src="{{ livro.imgUrl }}" alt="Livro 1" />
+        
+        <div class="detalhes">
+          <h2>{{ livro.title }}</h2>
+          <p>Autor: {{ livro.author }}</p>
+          <p>Ano de Publicação: {{ livro.publicationDate }}</p>
+          <!-- </a> -->
+          <div class="ler-livro">
+            <a href="#" class="btn-ler" title="Ver Detalhes"> 📖 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
