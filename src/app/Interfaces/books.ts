@@ -8,4 +8,5 @@ export interface Books {
         pages: number;
         language?: string;
         imgUrl: string;
+        modalOpen: boolean;
 }

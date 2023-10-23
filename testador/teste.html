@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="openModal">Abrir Modal</button>
+    
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Meu Modal</h2>
+            <p>Conteúdo do modal.</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">asdasdd</div>
+
+    <script>
+        const openModalButton = document.getElementById('openModal');
+        const modal = document.getElementById('myModal');
+        const closeModalButton = document.getElementById('closeModal');
+        const overlay = document.getElementById('overlay');
+        
+        openModalButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+        
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

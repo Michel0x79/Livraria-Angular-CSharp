@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddDbContext<LivrariaDbContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -36,6 +37,11 @@ app.MapPost("v1/livros", async (LivrariaDbContext mContext, Book newBook) => {
 app.MapGet("v1/livros", async (LivrariaDbContext context) =>
 {
     return await context.Set<Book>().AsNoTracking().ToListAsync();
+});
+
+app.MapGet("v1/livros/{id}", async (LivrariaDbContext mContext, int id) => 
+{
+    return await mContext.Set<Book>().Where(l => l.Id.Equals(id)).FirstOrDefaultAsync();
 });
 
 app.MapPut("v1/livros/{id}", async (LivrariaDbContext mContext, Book book, int id) => {
